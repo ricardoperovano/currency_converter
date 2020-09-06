@@ -9,10 +9,13 @@ function App() {
   };
 
   return (
-    <Grid style={gridStyle}>
+    <Grid style={gridStyle} columns={6}>
       <Grid.Row>
         <Grid.Column>
           <Conversor from="USD" to="BRL"></Conversor>
+        </Grid.Column>
+        <Grid.Column>
+          <Conversor from="CAD" to="BRL"></Conversor>
         </Grid.Column>
       </Grid.Row>
     </Grid>

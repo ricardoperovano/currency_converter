@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Button, Form, Input } from "semantic-ui-react";
 
 export default function Conversor({ from, to }) {
@@ -16,6 +16,10 @@ export default function Conversor({ from, to }) {
     setCotacao(result[`${from}_${to}`]);
     setLoading(false);
   };
+
+  useEffect(() => {
+    convert();
+  }, []);
 
   return (
     <Card>
@@ -37,7 +41,7 @@ export default function Conversor({ from, to }) {
             </Form.Field>
             <Form.Field>
               <label>{to}:</label>
-              <Input type="text" placeholder="Valor" value={valor * cotacao} />
+              <label>{(valor * cotacao).toFixed(2)}</label>
             </Form.Field>
           </Form>
         </Card.Description>
