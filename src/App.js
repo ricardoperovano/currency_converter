@@ -9,7 +9,7 @@ function App() {
   };
 
   return (
-    <Grid style={gridStyle} columns={6}>
+    <Grid style={gridStyle} columns={6} centered>
       <Grid.Row>
         <Grid.Column>
           <Conversor from="USD" to="BRL"></Conversor>
